@@ -28,7 +28,7 @@ public class ListOfFiles implements Initializable {
     @FXML
     private TableColumn<AramexFile, String> file_ext;
 
-    private ObservableList<AramexFile> aramexFiles = FXCollections.observableArrayList(
+    private final ObservableList<AramexFile> aramexFiles = FXCollections.observableArrayList(
         Import.getFiles()
     );
 

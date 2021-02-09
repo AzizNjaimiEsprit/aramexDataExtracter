@@ -16,7 +16,7 @@ import java.util.List;
 public class Export {
 
 
-    public static void export (ArrayList<Item> toExport) {
+    public static void export(ArrayList<Item> toExport) {
         try {
             XSSFWorkbook workbook = new XSSFWorkbook();
             XSSFSheet sheet = workbook.createSheet("Reviews");
@@ -45,7 +45,7 @@ public class Export {
     }
 
 
-    private static  void writeHeaderLine(XSSFSheet sheet) {
+    private static void writeHeaderLine(XSSFSheet sheet) {
 
         Row headerRow = sheet.createRow(0);
 

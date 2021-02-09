@@ -7,12 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import sample.models.Item;
 import sample.services.Import;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ListOfData implements Initializable {
@@ -24,17 +22,13 @@ public class ListOfData implements Initializable {
 
     @FXML
     private TableColumn<Item, String> data_email;
-
+    private final ObservableList<Item> itemObservableList = FXCollections.observableArrayList(
+        Import.exportFile()
+    );
 
 
     public ListOfData() throws Exception {
     }
-
-
-    private ObservableList<Item> itemObservableList = FXCollections.observableArrayList(
-        Import.exportFile()
-    );
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

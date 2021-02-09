@@ -9,7 +9,6 @@ import sample.models.Item;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Import {
@@ -28,7 +27,7 @@ public class Import {
         return toExport;
     }
 
-    public static List<AramexFile> getFiles(){
+    public static List<AramexFile> getFiles() {
         File dir = new File("C:\\Aramex\\input");
         File[] directoryListing = dir.listFiles();
         ArrayList<AramexFile> toExport = new ArrayList<>();
@@ -37,19 +36,19 @@ public class Import {
                 // Do something with child
                 String ext2 = FilenameUtils.getExtension(child.getName());
                 String name = FilenameUtils.getBaseName(child.getName());
-                toExport.add(new AramexFile(name,ext2));
+                toExport.add(new AramexFile(name, ext2));
             }
         }
         return toExport;
     }
 
 
-    public static Item getItem (File file) throws IOException {
+    public static Item getItem(File file) throws IOException {
         PDDocument document = PDDocument.load(file);
         PDFTextStripper pdfStripper = new PDFTextStripper();
         String text = pdfStripper.getText(document);
         //parser(text);
-        return new Item(file.getName(), file.getName()+"@gmail.com");
+        return new Item(file.getName(), file.getName() + "@gmail.com");
     }
 
 
