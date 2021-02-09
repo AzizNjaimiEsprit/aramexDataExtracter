@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jar_files">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/commons-io-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/pdfbox-app-2.0.22.jar!/" />
+      <root url="file://$PROJECT_DIR$/jars/jar_files" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/jars/jar_files" recursive="false" />
+  </library>
+</component>

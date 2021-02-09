@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListOfFiles">
+   <children>
+      <TableView fx:id="files_tab" layoutX="57.0" layoutY="92.0" prefHeight="238.0" prefWidth="475.0">
+        <columns>
+          <TableColumn fx:id="file_name" prefWidth="334.0" text="File Name" />
+          <TableColumn fx:id="file_ext" minWidth="0.0" prefWidth="140.0" text="File Extension" />
+        </columns>
+      </TableView>
+      <Label layoutX="120.0" layoutY="36.0" text="List Of Files Found in C:/Aramex/inputs">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button onMouseClicked="#exportData" fx:id="export_btn" layoutX="219.0" layoutY="386.0" mnemonicParsing="false" text="Export Informations">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
